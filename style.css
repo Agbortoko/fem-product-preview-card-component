@@ -53,6 +53,7 @@ body{
 
 .card-image img{
     max-width: 100%;
+    width: 100%;
     min-height: 100%;
     object-fit: cover;
 }
@@ -127,11 +128,17 @@ body{
 }
 
 
+.attribution{
+    display: none;
+}
 
-@media screen and (min-width: 500px) {
+
+
+
+@media screen and (min-width: 750px) {
     
     .card{
-        width: 40%;
+        max-width: 550px;
         display: flex;
     }
 
@@ -151,11 +158,32 @@ body{
         display: block;
     }
 
+
+
+    .attribution {
+        display: block;
+        position: absolute;
+        bottom: 5%;
+        font-size: 11px; text-align: center; 
+        background-color: var(--veryDarkBlue);
+        padding: 1rem;
+        border-top-right-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        color: var(--white);
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .attribution:hover{
+        cursor: pointer;
+        scale: 1.1;
+        transition: scale 450ms ease-in-out;
+    }
+    .attribution a { color: var(--cream); }
+    
+
 }
 
 
 
 
-.attribution {font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
 

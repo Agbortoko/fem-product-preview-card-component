@@ -1,0 +1,161 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+
+:root{
+    --darkCyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+
+    --veryDarkBlue:  hsl(212, 21%, 14%);
+    --darkGrayishBlue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+
+    --defaultFontSize: 0.875rem;
+    --defaultTimesTwo: calc(var(--defaultFontSize) * 2.5);
+}
+
+
+body{
+    
+    font-size: var(--defaultFontSize);
+}
+
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--cream);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+
+
+.card{
+    background-color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+.card-image{
+    width: 100%;
+    overflow: hidden;
+}
+
+.card-image img{
+    max-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+
+
+.card-image .desktop-image{
+    display: none;
+}
+
+.card-header, .card-body{
+    padding: 1.8rem 1.8rem 0 1.8rem;
+}
+
+.card-footer{
+    padding: 1.8rem;
+}
+
+.card-header h3{
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--darkGrayishBlue);
+    letter-spacing: 4px;
+    margin-bottom: 0.8rem;
+}
+
+
+.card-header h2{
+    font-size: var(--defaultTimesTwo);
+    font-family: 'Fraunces', serif;
+    line-height: 34px;
+}
+
+.card-body p{
+    color: var(--darkGrayishBlue);
+    line-height: 24px;
+}
+
+.card-footer .price{
+    display: flex;
+    align-items: center;
+}
+
+.card-footer .sale-price{
+    font-size: var(--defaultTimesTwo);
+    font-family: 'Fraunces', serif;
+    color: var(--darkCyan);
+    margin-right: 1rem;
+}
+
+.card-footer .regular-price{
+    color: var(--darkGrayishBlue);
+    text-decoration: line-through;
+}
+
+.card-footer .btn{
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    font-weight: 700;
+    color: var(--white);
+    background-color: var(--darkCyan);
+    margin-top: 1rem;
+    border-radius: 8px;
+}
+
+
+.card-footer .btn .btn-icon{
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}
+
+
+
+@media screen and (min-width: 500px) {
+    
+    .card{
+        width: 40%;
+        display: flex;
+    }
+
+    .card-image{
+        width: 50%;
+    }
+
+    .card-content{
+        width: 50%;
+    }
+
+    .card-image .mobile-image{
+        display: none;
+    }
+
+    .card-image .desktop-image{
+        display: block;
+    }
+
+}
+
+
+
+
+.attribution {font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
